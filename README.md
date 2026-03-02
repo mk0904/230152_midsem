@@ -122,8 +122,8 @@ Tools used: **Perplexity AI** (paper search & selection) and **Claude by Anthrop
 
 | Field | Value |
 |---|---|
-| Name | YOUR_FULL_NAME |
-| Roll Number | YOUR_ROLL_NUMBER |
+| Name | Manish Kumar |
+| Roll Number | 230152 |
 | Course | Advanced Machine Learning |
 | Exam | Mid-Semester Examination — Part A |
 | Submission Date | 2026-03-02 |
