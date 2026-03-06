@@ -1,0 +1,41 @@
+{
+  "task_tag": "Task 1.3",
+  "student_verification": {
+    "name": "student",
+    "declaration": "I used Claude to help structure the four sections of task 1.3. The reasoning in section 4 (condition where paper wouldn't outperform baseline) is based on my own understanding of the learning curve in Figure 2 and the fixed-resource limitations of the method."
+  },
+  "interactions": [
+    {
+      "prompt": "great now lets proceed for task 1.3",
+      "response_summary": "Generated all four sections: named the unigram SVM baseline, explained its limitation as opaque token features, described how Senti-features and tree kernel overcome it, and gave a reasoned inference about when the baseline would win at large data scales.",
+      "code_used_verbatim": false,
+      "student_modification": null
+    },
+    {
+      "prompt": "does it matches to the rubrics given? or any changes required",
+      "response_summary": "Checked each rubric point, found section 2 slightly over-written for a 2-mark question, trimmed it to two tight bullets.",
+      "code_used_verbatim": false,
+      "student_modification": null
+    },
+    {
+      "prompt": "oh ohk btw what limitation of that baseline the paper identifies and how did the proposed method overcomes it",
+      "response_summary": "Explained the limitation (opaque tokens, no semantics) and how the method overcomes it (encoding what words mean vs which words appear) in plain language.",
+      "code_used_verbatim": false,
+      "student_modification": null
+    }
+  ],
+  "top_5_prompts": [
+    {
+      "prompt": "great now lets proceed for task 1.3",
+      "why_selected": "Main prompt that initiated task 1.3 content"
+    },
+    {
+      "prompt": "does it matches to the rubrics given? or any changes required",
+      "why_selected": "Used to verify rubric compliance and trigger cleanup"
+    },
+    {
+      "prompt": "oh ohk btw what limitation of that baseline the paper identifies and how did the proposed method overcomes it",
+      "why_selected": "Used to understand the paper's argument before finalising section 2 and 3"
+    }
+  ]
+}

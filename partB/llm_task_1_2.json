@@ -1,0 +1,41 @@
+{
+  "task_tag": "Task 1.2",
+  "student_verification": {
+    "name": "student",
+    "declaration": "I used Claude to help identify and phrase the three assumptions. I verified each assumption against the paper myself and confirmed the section/table references are accurate. The violation scenarios are grounded in real Twitter language behaviour that I understand."
+  },
+  "interactions": [
+    {
+      "prompt": "now let's proceed for task 1.2",
+      "response_summary": "Generated three assumptions with the required format: assumption, why needed, violation scenario, paper reference. Assumptions covered emoticon reliability, context-independent prior polarity, and newswire POS tagger transferability.",
+      "code_used_verbatim": false,
+      "student_modification": null
+    },
+    {
+      "prompt": "why do we need this assumption: Newswire POS tagger works on tweets and like what would be different if we don't keep this assumption",
+      "response_summary": "Explained why the POS tagger assumption matters and what happens when it breaks — corrupts f1, f5, f8 features which are the most important group.",
+      "code_used_verbatim": false,
+      "student_modification": null
+    },
+    {
+      "prompt": "ohk understood but can you also help me write these things shorter in bullets so as to be more readable and also check on the instructions if this follow that",
+      "response_summary": "Rewrote all three assumptions into tight 2-3 bullet format per field, trimmed to match rubric's 2-3 sentence requirement, removed the unnecessary note cell.",
+      "code_used_verbatim": false,
+      "student_modification": null
+    }
+  ],
+  "top_5_prompts": [
+    {
+      "prompt": "now let's proceed for task 1.2",
+      "why_selected": "Main prompt that initiated task 1.2 content"
+    },
+    {
+      "prompt": "why do we need this assumption: Newswire POS tagger works on tweets and like what would be different if we don't keep this assumption",
+      "why_selected": "Used to deepen understanding of assumption 3 before finalising it"
+    },
+    {
+      "prompt": "ohk understood but can you also help me write these things shorter in bullets so as to be more readable and also check on the instructions if this follow that",
+      "why_selected": "Used to clean up formatting and verify rubric compliance"
+    }
+  ]
+}
