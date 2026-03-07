@@ -1,0 +1,61 @@
+{
+  "task_tag": "Task 2.3",
+  "student_verification": {
+    "name": "student",
+    "declaration": "I used Claude to help write the results comparison and gap explanation. The three reasons for the gap (DAL substitution, label noise, missing acronym expansion) are grounded in my reading of the paper's Section 4, 5, and 8.1.2."
+  },
+  "interactions": [
+    {
+      "prompt": "great let's proceed with the next one — task 2.3",
+      "response_summary": "Built task 2.3 notebook with full pipeline rebuild, 5-fold CV evaluation table comparing our results to paper's Table 5, two visualisations (bar chart + confusion matrix), and a gap explanation paragraph.",
+      "code_used_verbatim": true,
+      "student_modification": "Updated the results table with actual numbers after running the notebook."
+    },
+    {
+      "prompt": "wait why does this notebook rebuild the whole pipeline again — can't it just import from 2.2",
+      "response_summary": "Explained that self-contained notebooks are better for reproducibility — importing from task_2_2 creates a hidden dependency and means the notebook breaks if 2.2 hasn't been run. Rebuilding takes 30 extra lines but is much safer.",
+      "code_used_verbatim": false,
+      "student_modification": null
+    },
+    {
+      "prompt": "can you crisp down the gap explanation into bullet points and explain them shortly",
+      "response_summary": "Rewrote the gap explanation from a paragraph into three tight bullets each with one sentence and a direct paper reference, plus a closing sentence about relative ordering mattering more than absolute numbers.",
+      "code_used_verbatim": false,
+      "student_modification": null
+    },
+    {
+      "prompt": "should i get any more visualisation for comparing the gap visually between the three models?",
+      "response_summary": "Advised that the existing two plots (bar chart + confusion matrix) already cover everything the rubric asks for and adding more would be padding.",
+      "code_used_verbatim": false,
+      "student_modification": null
+    },
+    {
+      "prompt": "is it a problem that the gap is large — like will the marker penalise for not matching the paper",
+      "response_summary": "Explained that the rubric says not to present a gap as a failure — the marker expects a gap because we use SentiWordNet not DAL. What matters is matching the relative model ordering (Unigram+Senti > Unigram ≈ Senti-alone) not the absolute number.",
+      "code_used_verbatim": false,
+      "student_modification": null
+    }
+  ],
+  "top_5_prompts": [
+    {
+      "prompt": "great let's proceed with the next one — task 2.3",
+      "why_selected": "Main prompt that initiated task 2.3 notebook creation"
+    },
+    {
+      "prompt": "wait why does this notebook rebuild the whole pipeline again — can't it just import from 2.2",
+      "why_selected": "Used to understand the design decision around self-contained notebooks"
+    },
+    {
+      "prompt": "can you crisp down the gap explanation into bullet points and explain them shortly",
+      "why_selected": "Used to improve readability of the gap analysis section"
+    },
+    {
+      "prompt": "should i get any more visualisation for comparing the gap visually between the three models?",
+      "why_selected": "Used to decide whether additional plots were needed"
+    },
+    {
+      "prompt": "is it a problem that the gap is large — like will the marker penalise for not matching the paper",
+      "why_selected": "Used to clarify what the rubric actually rewards — relative ordering not absolute accuracy"
+    }
+  ]
+}

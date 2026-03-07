@@ -1,0 +1,51 @@
+{
+  "task_tag": "Task 2.1",
+  "student_verification": {
+    "name": "student",
+    "declaration": "I used Claude to help choose the dataset and write the preprocessing code. I ran the notebook myself, caught that the stats were showing zeros, debugged it with Claude, and confirmed the fix worked. The dataset justification and limitation analysis reflect my own understanding."
+  },
+  "interactions": [
+    {
+      "prompt": "Question 2 reproduction on a toy dataset...so can you help me what should i do here for task 2.1 dataset selection and setup",
+      "response_summary": "Suggested NLTK twitter_samples as the best dataset choice and explained why it fits the paper's method better than alternatives like IMDb or 20newsgroups.",
+      "code_used_verbatim": true,
+      "student_modification": "Ran the notebook and noticed the stats showed zeros for URLs, targets, and emoticons. Reported the issue back to Claude for debugging."
+    },
+    {
+      "prompt": "Total tokens: 72524 Stop words: 16710 (23.0%) URLs (||U||): 0 Targets (||T||): 0 Positive emoticons: 0 Negative emoticons: 0 — isn't this dataset wrong for the purpose?",
+      "response_summary": "Diagnosed that the issue was a regex escaping bug (r'' prefix lost in JSON serialisation) not the dataset itself. Fixed the emoticon patterns and URL regex.",
+      "code_used_verbatim": true,
+      "student_modification": "Re-ran notebook after fix to verify stats were now non-zero."
+    },
+    {
+      "prompt": "still got this only [same zero stats]",
+      "response_summary": "Found the second bug — TweetTokenizer splits ||P|| on | characters making .count('||P||') return 0. Fixed by switching to .split() for token counting.",
+      "code_used_verbatim": true,
+      "student_modification": "Verified fix resolved the zero counts."
+    },
+    {
+      "prompt": "can you keep things cleaner and like in bullets so as to easily understandable — Both markdown and code comments",
+      "response_summary": "Rewrote all markdown explanation cells to start with 'What this does:' followed by tight bullets, and trimmed code comments to one short line per block.",
+      "code_used_verbatim": false,
+      "student_modification": null
+    }
+  ],
+  "top_5_prompts": [
+    {
+      "prompt": "Question 2 reproduction on a toy dataset...so can you help me what should i do here for task 2.1",
+      "why_selected": "Main prompt that initiated dataset selection and notebook creation"
+    },
+    {
+      "prompt": "Total tokens: 72524...URLs: 0 Targets: 0 Positive emoticons: 0 — isn't this dataset wrong for the purpose?",
+      "why_selected": "Debugging prompt that led to fixing the regex escaping bug"
+    },
+    {
+      "prompt": "still got this only [same zero stats shown]",
+      "why_selected": "Led to discovery of the TweetTokenizer splitting issue"
+    },
+    {
+      "prompt": "can you keep things cleaner and like in bullets so as to easily understandable",
+      "why_selected": "Used to clean up both markdown and code comment formatting"
+    }
+  ]
+}

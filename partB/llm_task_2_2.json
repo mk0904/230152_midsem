@@ -1,0 +1,67 @@
+{
+  "task_tag": "Task 2.2",
+  "student_verification": {
+    "name": "student",
+    "declaration": "I used Claude to help implement the Senti-features model. I understood each feature group from Table 4 before the code was written, asked clarifying questions about POS tagging and nested CV, and verified the implementation matches the paper's description."
+  },
+  "interactions": [
+    {
+      "prompt": "great similarly now let's proceed for 2.2",
+      "response_summary": "Outlined the steps needed: prior polarity, POS tagging, 50 Senti-features per window, unigram matrix, and 5-fold nested CV. Asked which system to reproduce first.",
+      "code_used_verbatim": false,
+      "student_modification": null
+    },
+    {
+      "prompt": "reproduce the best 2 way system from table 5 — unigram plus sentifeatures",
+      "response_summary": "Built the full task_2_2 notebook implementing prior polarity via SentiWordNet, POS tagging with special tag exclusion, 100 Senti-features (50 × 2 windows), TF-IDF unigram matrix, and 5-fold CV with nested GridSearchCV.",
+      "code_used_verbatim": true,
+      "student_modification": "Read through each code block and verified it matches Table 4 feature descriptions before running."
+    },
+    {
+      "prompt": "why did we do pos tagging for specific tags?",
+      "response_summary": "Explained that special tags like ||P|| and NOT should not be POS-tagged — they are sentiment labels, not real words. If fed to the tagger they get arbitrary tags like NN which would corrupt features f1, f5, f8.",
+      "code_used_verbatim": false,
+      "student_modification": null
+    },
+    {
+      "prompt": "and for c tuning is it necessary to use gridsearch on innercv?",
+      "response_summary": "Explained that nested CV is exactly what Section 8 describes — tuning C on the training fold only prevents the test fold from influencing hyperparameter selection. GridSearchCV inside cross_val_score is the cleanest sklearn implementation of this.",
+      "code_used_verbatim": false,
+      "student_modification": null
+    },
+    {
+      "prompt": "wait so what exactly is f9 — i see it in the code but it's not clearly in table 4",
+      "response_summary": "Clarified that f9 is the sum of all prior polarity scores across all tokens in the window — it's mentioned in the Non-Polar Other row of Table 4 as an overall sentiment score feature, separate from the POS-specific f8.",
+      "code_used_verbatim": false,
+      "student_modification": null
+    },
+    {
+      "prompt": "ok and the bar chart — can it also show the paper values so we can visually compare",
+      "response_summary": "Updated the visualisation to show paper Table 5 values as black diamond markers on top of the our-results bars, so the gap is visible at a glance.",
+      "code_used_verbatim": false,
+      "student_modification": null
+    }
+  ],
+  "top_5_prompts": [
+    {
+      "prompt": "reproduce the best 2 way system from table 5 — unigram plus sentifeatures",
+      "why_selected": "Main prompt that specified which system to implement"
+    },
+    {
+      "prompt": "why did we do pos tagging for specific tags?",
+      "why_selected": "Used to understand and verify the POS tagging design choice"
+    },
+    {
+      "prompt": "and for c tuning is it necessary to use gridsearch on innercv?",
+      "why_selected": "Used to understand and justify the nested CV approach from the paper"
+    },
+    {
+      "prompt": "wait so what exactly is f9 — i see it in the code but it's not clearly in table 4",
+      "why_selected": "Used to clarify a feature that was ambiguous in the paper's Table 4"
+    },
+    {
+      "prompt": "ok and the bar chart — can it also show the paper values so we can visually compare",
+      "why_selected": "Used to improve the visualisation to show the reproduction gap directly"
+    }
+  ]
+}
