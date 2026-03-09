@@ -1,0 +1,67 @@
+{
+  "task_tag": "Task 3.1",
+  "student_verification": {
+    "name": "student",
+    "declaration": "I used Claude to help design and implement the two ablations. I chose Polar POS and Twitter-specific features as the two components based on my reading of Table 6 and Section 8.1.2. The interpretations connect back to my own assumptions from Task 1.2."
+  },
+  "interactions": [
+    {
+      "prompt": "got it now let's move to task 3.1",
+      "response_summary": "Proposed two ablation candidates: removing Polar POS features (f1, f8) and removing Twitter-specific features (f3, f4, f6), with rationale for each based on Table 6 and Section 8.1.2.",
+      "code_used_verbatim": false,
+      "student_modification": null
+    },
+    {
+      "prompt": "why these two specifically and not like removing negation or the last third window",
+      "response_summary": "Explained that f1/f8 are the most important features per Table 6 so removing them gives the most interpretable result, and Twitter-specific features are explicitly called 'marginal' in Section 8.1.2 — so both ablations test a specific paper claim rather than arbitrary removal.",
+      "code_used_verbatim": false,
+      "student_modification": null
+    },
+    {
+      "prompt": "ohk makes sense...so how do we actually implement it without rewriting everything",
+      "response_summary": "Suggested a parametrised extract_features() with two boolean flags — use_polar_pos and use_twitter_specific — so ablated versions are just one flag flip away from the full model.",
+      "code_used_verbatim": false,
+      "student_modification": null
+    },
+    {
+      "prompt": "ok can you now write the full notebook for this with both ablations and the plots",
+      "response_summary": "Built the full task_3_1 notebook with the parametrised pipeline, evaluation for full model + both ablations, two plots per ablation (bar chart + per-fold line), and 5-7 sentence interpretations with section references.",
+      "code_used_verbatim": true,
+      "student_modification": "Verified that flipping use_polar_pos=False does not affect the Twitter-specific feature counts and vice versa."
+    },
+    {
+      "prompt": "for the interpretation part can you also connect it back to the assumptions from task 1.2",
+      "response_summary": "Updated both interpretation cells to explicitly reference Assumption 1 (Twitter-specific) and Assumption 2 (Polar POS) from Task 1.2.",
+      "code_used_verbatim": false,
+      "student_modification": null
+    },
+    {
+      "prompt": "also add a summary table at the end comparing all three — full, ablation 1, ablation 2",
+      "response_summary": "Added a markdown summary table at the end of the notebook with all three model rows and a key takeaway note.",
+      "code_used_verbatim": false,
+      "student_modification": null
+    }
+  ],
+  "top_5_prompts": [
+    {
+      "prompt": "got it now let's move to task 3.1",
+      "why_selected": "Initiated the ablation study design"
+    },
+    {
+      "prompt": "why these two specifically and not like removing negation or the last third window",
+      "why_selected": "Used to understand and justify the choice of ablation components"
+    },
+    {
+      "prompt": "ohk makes sense...so how do we actually implement it without rewriting everything",
+      "why_selected": "Led to the parametrised flag-based implementation approach"
+    },
+    {
+      "prompt": "ok can you now write the full notebook for this with both ablations and the plots",
+      "why_selected": "Main prompt that triggered actual notebook generation"
+    },
+    {
+      "prompt": "for the interpretation part can you also connect it back to the assumptions from task 1.2",
+      "why_selected": "Strengthened interpretation by linking ablations to Task 1.2 assumptions"
+    }
+  ]
+}
