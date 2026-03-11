@@ -1,0 +1,61 @@
+{
+  "task_tag": "Task 4.1",
+  "student_verification": {
+    "name": "student",
+    "declaration": "I used Claude to help draft the report. The reflection section (what surprised me, what I couldn't implement, what I'd revisit) is based on my actual experience running the notebooks. All numbers in the report will be updated to match my actual output before submission."
+  },
+  "interactions": [
+    {
+      "prompt": "now we need the 4th one and the report i want you to write such that it feels as if i myself wrote it...like check how i prompt things write how i would have done it personalized to me",
+      "response_summary": "Observed the writing style across the conversation and drafted the report in a student voice — direct, technically honest, no overselling, with a reflection section that admits what couldn't be reproduced.",
+      "code_used_verbatim": false,
+      "student_modification": null
+    },
+    {
+      "prompt": "for the reflection can you make it feel more like i'm genuinely reflecting not just summarising what i did",
+      "response_summary": "Rewrote the reflection section to include a genuine surprise (Twitter-specific features mattering less than expected), an honest admission about not reproducing the Tree Kernel, and a clear statement of what would be revisited with more time.",
+      "code_used_verbatim": false,
+      "student_modification": null
+    },
+    {
+      "prompt": "also make sure the report doesnt exceed 4 pages plus appendix — check that",
+      "response_summary": "Verified the report structure fits within 4 content pages plus appendix by trimming Q1 section and compressing the results table. Appendix kept to file structure and reproducibility notes only.",
+      "code_used_verbatim": false,
+      "student_modification": null
+    },
+    {
+      "prompt": "the gap analysis in the report — can we have it as bullets like i did in the notebook not as a paragraph",
+      "response_summary": "Changed the gap analysis section to three tight bullets matching the format in task_2_3.ipynb — consistent across notebook and report.",
+      "code_used_verbatim": false,
+      "student_modification": null
+    },
+    {
+      "prompt": "can the section on what i found surprising be a bit more specific — like mention the actual features not just generic",
+      "response_summary": "Updated the surprise paragraph to specifically name f3 (emoticons) and f1/f8 (Polar POS) and explain the counterintuitive finding that emoticons contribute less than the linguistic features even though tweets are often emoticon-heavy.",
+      "code_used_verbatim": false,
+      "student_modification": null
+    }
+  ],
+  "top_5_prompts": [
+    {
+      "prompt": "now we need the 4th one and the report i want you to write such that it feels as if i myself wrote it...personalized to me",
+      "why_selected": "Main prompt that initiated the report drafting"
+    },
+    {
+      "prompt": "for the reflection can you make it feel more like i'm genuinely reflecting not just summarising what i did",
+      "why_selected": "Used to rewrite the reflection section to sound authentic"
+    },
+    {
+      "prompt": "also make sure the report doesnt exceed 4 pages plus appendix — check that",
+      "why_selected": "Used to verify page limit compliance"
+    },
+    {
+      "prompt": "the gap analysis in the report — can we have it as bullets like i did in the notebook not as a paragraph",
+      "why_selected": "Used to maintain consistency between report and notebook formatting"
+    },
+    {
+      "prompt": "can the section on what i found surprising be a bit more specific — like mention the actual features not just generic",
+      "why_selected": "Used to add specificity to the surprise/reflection section"
+    }
+  ]
+}
